@@ -1,0 +1,31 @@
+#header.clearfix
+  %table
+    %tr
+      %td
+        %h1.top-left-logo
+          %a(href='/') XYzon
+      %td
+        = haml :search_form, :layout => false
+        #error-messages
+
+#x-menu-box
+  %select#x-axis-menu
+  %br
+  ←
+  %span#x-axis-label
+
+
+#y-menu-box
+  %select#y-axis-menu
+  %span#y-axis-label
+  ↑
+
+%script{:type => 'text/javascript',
+        :src  => 'https://www.google.com/jsapi?key=ABQIAAAAuzQWdkMdzj6kpw7N2mVsaBSjzgBSLZIWcdw0OWs_Mc2tRxk8fhQBJNFRdh0ycMPfJY_l9t7QZTS89w'}
+%script{:type => 'text/javascript',
+        :src  => '/js/lib/jquery-1.4.2.min.js'}
+%script{:type => 'text/javascript',
+        :src  => '/js/lib/excanvas.compiled.js'}
+
+%script{:type => 'text/javascript',
+        :src  => '/js/concatenation.js'}

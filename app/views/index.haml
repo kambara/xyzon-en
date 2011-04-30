@@ -1,0 +1,28 @@
+.body.center
+  %h1.index XYzon
+  %form.search.index(method = "get"
+               action = "/search")
+    %input.keyword.bold(type = "text"
+                        name = "keyword"
+                        value = @keyword)
+    %input.large-font(type = "submit"
+                      value = "Search")
+    %br
+    = haml :search_form_categories, :layout => false
+
+  #footer
+    English
+    |
+    %a(href="http://www.xyzon.net/") Japanese
+    %br
+    %a.kakakucom(href="http://apiblog.kakaku.com/")
+      %img(src="http://api.kakaku.com/images/api/135_17_gray.gif"
+           alt="価格.com WEB サービス"
+           title="価格.com　WEBサービス"
+           border="0"
+           style="vertical-align:middle;"
+           )>
+    %br
+    &copy; 2011
+    %a(href="http://sappari.org/") kambara
+

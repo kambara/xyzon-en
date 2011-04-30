@@ -1,0 +1,19 @@
+%form.search.top(method = "get"
+                 action = "/search")
+  .keyword-box
+    %input.keyword.bold(type = "text"
+                        name = "keyword"
+                        value = @keyword)
+    %input.large-font(type = "submit"
+                      value = "Search")
+  %span.categories-box
+    = haml :search_form_categories, :layout => false
+    %span#sub-category-crumb(style="display:none;")
+      &#155;
+    %span#current-sub-category
+    %span#sub-categories
+    
+
+    - @recommend_categories[0, 3].each do |category|
+      %a.recommend{:href => "/search?keyword=#{@keyword}&category=#{category}"}<
+        = Amazon::SearchIndex.jp(category)
